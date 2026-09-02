@@ -11,13 +11,28 @@
 | Human-in-the-loop | | |
 | **Total AI COGS** | | |
 
+## Feature Cost Mapping
+
+| Feature | Complexity | Model Tier | Why Cheaper Model? | Cost/Req | Volume % | Weighted |
+|---------|-----------|-----------|-------------------|----------|----------|----------|
+| | Simple | Small | Reduce COGS, high volume, acceptable latency | $_____ | __% | $_____ |
+| | Medium | Mid | Balance quality vs. cost, handles most cases | $_____ | __% | $_____ |
+| | Complex | Frontier | Premium accuracy required, lower volume justifies cost | $_____ | __% | $_____ |
+| | | | | | **100%** | **$_____** |
+
+**Why cheaper models matter:**
+- **Volume:** 70-80% of requests can run on small/mid models (no UX degradation)
+- **Margin protection:** Cheaper tiers drop COGS by 10-50x vs. frontier-only
+- **Latency:** Small models = faster inference (bonus)
+- **Resilience:** Diversified model portfolio = less dependency on single provider
+
 ## Cascading Strategy
 <!-- Cheap model → frontier model routing logic -->
 
 **Triage model:**
 **Frontier model:**
 **Routing rule:**
-**Expected cascade ratio:**
+**Expected cascade ratio:** __% / __%
 
 ## Pricing Model
 
