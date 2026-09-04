@@ -8,10 +8,10 @@
 
 | Component | Module | Status | Key Artifact |
 |-----------|--------|--------|-------------|
-| **The Bet** | M1 | [ ] | `01-the-bet/` |
+| **The Bet** | M1 | [x] | `01-the-bet/` |
 | **The Moat** | M2 | [ ] | `02-the-moat/` |
 | **The Margin** | M3 | [ ] | `03-the-margin/` |
-| **The Contract** | M4 | [ ] | `04-the-contract/` |
+| **The Contract** | M4 | [x] | `04-the-contract/` |
 | **The Guardrails** | M5 | [ ] | `05-the-guardrails/` |
 | **The Pitch** | M6 | [ ] | `06-the-pitch/` |
 
@@ -21,13 +21,22 @@
 
 **What we're building, for whom, why now.**
 
-- **Product:**
-- **AI Value Archetype:**
-- **Vulnerability Scores:** Moat __/5 · Data __/5 · Platform __/5
-- **Top Risk:**
-- **Confidence:** H / M / L
-- **Prototype:** [link]
-- **Kill Criteria:**
+- **Product:** SalesAssist — AI meeting notes, summary, and next-step generator for B2B sales teams.
+- **AI Value Archetype:** Workflow automation + knowledge augmentation (summarization, action extraction, personalization).
+- **Vulnerability Scores:** Moat 2/5 · Data 4/5 · Platform 3/5
+- **Top Risk:** Incorrect action items (hallucinated next steps) or privacy concerns from ingesting customer data.
+- **Confidence:** M
+- **Prototype:** https://prototype.example.com/salesassist (placeholder)
+- **Kill Criteria:** Retention < 20% at 3 months; more than 1 high-severity hallucination per 100 active sessions; unresolved data privacy blockers.
+
+Example product that helps in this module
+
+SalesAssist is a focused product that demonstrates how to use small, high-ROI AI features to prove a bet fast:
+
+- Problem: Sales teams spend hours writing meeting notes and following up with manual next-step tracking.
+- Solution: Use ASR + LLM summarization to produce accurate, timestamped notes, extract action items, and propose personalized next steps and templates for outreach.
+- Why now: Improvements in ASR for noisy conference calls, cheap LLM inference, and available CRM integrations create a low friction path to value.
+- Early success metric: % of meetings where users accept at least one generated action item within 48 hours.
 
 → Details: [`01-the-bet/`](01-the-bet/)
 
@@ -65,8 +74,10 @@
 
 **Why users will trust a probabilistic system.**
 
+This module includes a Golden Dataset Builder to curate evaluation data: examples with inputs, known-correct outputs, edge cases, and judge types. Use the dataset to measure accuracy, surface adversarial failures, and define clear kill/accept criteria.
+
 - **Reliability Target:**
-- **Golden Dataset:** __ rows, __ adversarial
+- **Golden Dataset:** See `04-the-contract/GOLDEN_DATASET.md` for the builder, templates, and dataset health guidance.
 - **Confidence UX:** [approach]
 - **HITL Architecture:**
 - **Failure Mode Coverage:**
